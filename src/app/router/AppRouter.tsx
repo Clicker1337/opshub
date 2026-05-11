@@ -1,34 +1,34 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import MainLayout from '@/app/providers/MainLayout';
-import DashboardPage from '@/pages/dashboard/DashboardPage';
-import InstallationsPage from '@/pages/installations/InstallationsPage.tsx';
-import UsersPage from '@/pages/users/UsersPage';
-import JobsPage from '@/pages/jobs/JobsPage';
-import AuditPage from '@/pages/audit/AuditPage';
-import SettingsPage from '@/pages/settings/SettingsPage';
-import LoginPage from '@/pages/login/LoginPage';
+
+import { MainLayout } from '@/app/layouts/MainLayout/MainLayout';
+import { AuditPage } from '@/pages/audit/AuditPage';
+import { DashboardPage } from '@/pages/dashboard/DashboardPage';
+import { InstallationsPage } from '@/pages/installations/InstallationsPage';
+import { JobsPage } from '@/pages/jobs/JobsPage';
+import { LoginPage } from '@/pages/login/LoginPage';
+import { SettingsPage } from '@/pages/settings/SettingsPage';
+import { UsersPage } from '@/pages/users/UsersPage';
+import { ROUTES } from '@/shared/config/constants';
 
 const router = createBrowserRouter([
   {
-    path: '/login',
+    path: ROUTES.login,
     element: <LoginPage />,
   },
   {
-    path: '/',
+    path: ROUTES.root,
     element: <MainLayout />,
     children: [
       { index: true, element: <DashboardPage /> },
-      { path: 'installations', element: <InstallationsPage /> },
-      { path: 'users', element: <UsersPage /> },
-      { path: 'jobs', element: <JobsPage /> },
-      { path: 'audit', element: <AuditPage /> },
-      { path: 'settings', element: <SettingsPage /> },
+      { path: ROUTES.installations, element: <InstallationsPage /> },
+      { path: ROUTES.users, element: <UsersPage /> },
+      { path: ROUTES.jobs, element: <JobsPage /> },
+      { path: ROUTES.audit, element: <AuditPage /> },
+      { path: ROUTES.settings, element: <SettingsPage /> },
     ],
   },
 ]);
 
-const AppRouter = () => {
+export const AppRouter = () => {
   return <RouterProvider router={router} />;
 };
-
-export default AppRouter;

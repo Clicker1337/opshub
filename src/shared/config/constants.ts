@@ -1,4 +1,6 @@
-export const HTTP_TIMEOUT_MS = 15_000;
+export const HTTP_TIMEOUT_MS = 15000;
+export const APP_NAME = 'OpsHub';
+export const APP_SUBTITLE = 'VK WorkSpace Admin';
 
 export const PAGINATION = {
   defaultPage: 1,
@@ -18,6 +20,7 @@ export const STORAGE_KEYS = {
 } as const;
 
 export const ROUTES = {
+  root: '/',
   login: '/login',
   dashboard: '/',
   installations: '/installations',

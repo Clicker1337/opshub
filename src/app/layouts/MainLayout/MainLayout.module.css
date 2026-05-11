@@ -1,0 +1,26 @@
+.layout {
+    min-height: 100vh;
+}
+
+.logo {
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header {
+    padding-left: 24px;
+}
+
+.headerTitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content {
+    margin: 24px;
+    padding: 24px;
+    border-radius: 8px;
+}
