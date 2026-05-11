@@ -1,10 +1,19 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { ConfigProvider } from 'antd';
-import App from './App';
+import '@/shared/config/env';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+import { ConfigProvider } from 'antd';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+import App from './App';
+
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element with id "root" not found in index.html');
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <ConfigProvider
       theme={{

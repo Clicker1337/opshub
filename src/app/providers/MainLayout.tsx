@@ -1,12 +1,12 @@
-import { Layout, Menu, theme } from 'antd';
 import {
-  DashboardOutlined,
   CloudServerOutlined,
-  TeamOutlined,
-  ThunderboltOutlined,
+  DashboardOutlined,
   FileSearchOutlined,
   SettingOutlined,
+  TeamOutlined,
+  ThunderboltOutlined,
 } from '@ant-design/icons';
+import { Layout, Menu, theme } from 'antd';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
