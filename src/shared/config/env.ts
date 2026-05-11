@@ -3,6 +3,10 @@ import { z } from 'zod';
 const envSchema = z.object({
   VITE_API_BASE_URL: z.url(),
   VITE_APP_NAME: z.string().min(1),
+  VITE_ENABLE_MOCKS: z
+    .enum(['true', 'false'])
+    .default('false')
+    .transform((value) => value === 'true'),
 });
 
 const parsed = envSchema.safeParse(import.meta.env);

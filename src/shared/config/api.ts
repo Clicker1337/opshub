@@ -12,12 +12,4 @@ export const API_ROUTES = {
     list: '/installations',
     byId: (id: string) => `/installations/${id}`,
   },
-  jobs: {
-    list: '/jobs',
-    byId: (id: string) => `/jobs/${id}`,
-    logs: (id: string) => `/jobs/${id}/logs`,
-  },
-  audit: {
-    list: '/audit',
-  },
 } as const;
